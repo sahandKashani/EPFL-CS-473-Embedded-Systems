@@ -20,8 +20,8 @@ int main(void) {
     cmos_sensor_output_generator_stop(&cmos_sensor_output_generator);
 
     cmos_sensor_output_generator_configure(&cmos_sensor_output_generator,
-                                           480,
                                            640,
+                                           480,
                                            CMOS_SENSOR_OUTPUT_GENERATOR_CONFIG_FRAME_FRAME_BLANK_MIN,
                                            CMOS_SENSOR_OUTPUT_GENERATOR_CONFIG_FRAME_LINE_BLANK_MIN,
                                            CMOS_SENSOR_OUTPUT_GENERATOR_CONFIG_LINE_LINE_BLANK_MIN,
