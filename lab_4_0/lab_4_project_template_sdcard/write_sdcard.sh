@@ -103,17 +103,17 @@ write_sdcard() {
 
     # preloader
     sudo dd if="${sdcard_a2_preloader_bin_file}" of="${sdcard_dev_a2}" bs=64K seek=0
+    sudo sync
 
     # fpga .rbf, uboot .img, uboot .scr, linux zImage, linux .dtb
     sudo cp "${sdcard_fat32_dir}"/* "${sdcard_dev_fat32_mount_point}"
+    sudo sync
 
     # linux rootfs
     pushd "${sdcard_dev_ext3_mount_point}"
     sudo tar -xzf "${sdcard_ext3_rootfs_tgz_file}"
-    popd
-
-    # flush write buffers to target
     sudo sync
+    popd
 
     # unmount sdcard partitions
     sudo umount "${sdcard_dev_fat32_mount_point}"

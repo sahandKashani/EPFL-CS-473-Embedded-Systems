@@ -1,3 +1,9 @@
+Pre-requisistes
+===============
+This script is intended to run on a linux machine on which you have root access!
+
+Instructions
+============
 You can then format & write your sdcard by doing the following:
 
 $ unzip lab_4_project_template_sdcard.zip
@@ -42,8 +48,3 @@ Once the sdcard is successfully written, do the following steps:
 9) If everything was successful, you should see an alternating pattern on the
    development board's LEDs around 8 seconds after power up. The memory
    controller is also correctly initialized, so you can test your project now.
-
-Let me know if something doesn't work.
-
-Best,
-Sahand
